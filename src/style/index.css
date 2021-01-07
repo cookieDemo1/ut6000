@@ -1,0 +1,547 @@
+
+html, body, div, ul, li, input, button, h1, h2 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+ul,li{
+	list-style: none;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+	'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+	'Noto Color Emoji';
+}
+
+#app {
+	height: 100%;
+	min-width: 1366px;
+	min-height: 813px;
+	background-color: #1F2343;
+	color: #D7DCF3;
+}
+
+
+::selection{
+	background: #1F2343;
+	color: #686E8C;
+}
+
+::moz-selection{
+	background: #1F2343;
+	color: #686E8C;
+}
+
+.header{
+	height: 60px;
+	line-height: 60px;
+	background-color: #151936;
+	padding-left: 30px;
+	letter-spacing: 2px;
+	position: relative;
+	border-bottom: 1px solid #1C2340;
+}
+
+.header-img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+
+.header-title{
+	display: inline-block;
+	color: #D7DCF3;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 120px;
+
+}
+
+.container{
+	display: flex;
+}
+
+.left{
+	width: 180px;
+	min-height: calc(100vh - 60px);
+	background-color: #0F132F;
+	/*border-top-right-radius: 10px;*/
+}
+
+.nav{
+	margin-top: 30px;
+
+}
+
+.link-item{
+	color: #686E8C;
+	text-decoration: none;
+	display: block;
+	height: 32px;
+	line-height: 32px;
+
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0 24px 20px 24px;
+	padding-left: 20px;
+	/*background-color: #fff;*/
+	border-radius: 4px;
+}
+
+.link-item:hover{
+	color: #01A891;
+	background-color: #060815;
+}
+
+.active{
+	color: #01A891;
+	background-color:#060815;
+
+}
+
+.right{
+	flex: 1;
+	min-height: calc(100vh - 100px);
+	background-color: #151936;
+}
+
+#device, #ip{
+	width: calc(100% - 60px);
+	height: calc(100% - 40px);
+	margin-left: 30px;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+
+/* 设备管理 */
+
+#device .top{
+	height: 420px;
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.top #fan-control{
+	width: 300px;
+	background-color: #1C2340;
+	margin-right: 10px;
+	border-radius: 4px;
+}
+
+.fan-img{
+	margin: 0 40px 0 40px;
+	height: 60%;
+	/*background-color: rgb(29,120,222);*/
+	border-radius: 4px;
+	border: 2px solid #38416A;
+}
+
+.fan-img img{
+	display: inline-block;
+}
+
+.fan-img .up-fan{
+	margin: 30px 0 90px 82px;
+}
+
+.fan-switch{
+	margin: 20px 40px 0;
+	height: 80px;
+	display: flex;
+	text-align: center;
+}
+
+.fan-switch div{
+	flex: 1;
+}
+
+.fan-switch div .switch{}
+
+
+
+/* ............ 风扇控制 ............ */
+
+.top #device-info{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#device-info .box{
+	flex: 4;
+	margin-bottom: 10px;
+
+	display: flex;
+}
+
+.box .box-item{
+	flex: 1;
+	margin-right: 10px;
+	background-color: #1C2340;
+	border-radius: 4px;
+}
+.box .box-item.last{
+	margin-right: 0;
+}
+
+
+
+.box-item img{
+	display: block;
+	margin: 30px auto 0;
+}
+
+.box-switch{
+	position: relative;
+	left: 30px;
+	top: 30px
+}
+
+/* ...... 箱子控制 ........ */
+
+
+#device-info .info{
+	flex: 3;
+	display: flex;
+}
+.info .info-item{
+	flex: 1;
+	margin-right: 10px;
+	background-color: #1C2340;
+	border-radius: 4px;
+}
+.info .info-item.last{
+	margin-right: 0;
+}
+
+
+/* .... 详情 .... */
+.info-item>p{
+	margin-left: 30px;
+}
+
+.info-item-child{
+	margin-left: 30px;
+	display: flex;
+}
+
+.info-item-child> .inof-img{
+	flex: 1;
+}
+
+.info-item-child .info-value{
+	flex: 1;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+
+#device .center{
+	height: 125px;
+
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.center .center-item{
+	flex: 1;
+	margin-right: 4px;
+	border-radius: 4px;
+	background-color: #1C2340;
+}
+.center .center-item.last{
+	margin-right: 0;
+}
+
+/* ......... center item ........... */
+.center-item>p{
+	text-align: center;
+	height: 18px;
+	font-size: 12px;
+	color:#686E8C;
+
+	background-color: #0F132F;
+	/*color: #FFFFFF;*/
+	margin: 0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.center-item-child{
+	display: flex;
+	position: relative;
+}
+
+.center-item-child>div{
+	flex: 1;
+}
+
+.center-item-child img{
+	margin: 30px 0 0 15px
+}
+
+.center-item-child .control>span{
+	display: block;
+	margin-left: 15px;
+	margin-top: 30px;
+	font-size: 14px;
+	opacity: .8
+	/*top: 25px;*/
+	/*right: 15px;*/
+}
+
+.center-item-child .control>input{
+	display: block;
+	margin-left: -15px;
+	margin-top: -20px;
+
+	/*position: absolute;*/
+	/*top: 55px;*/
+	/*right: 15px;*/
+}
+
+
+
+#device .bottom{
+	height: 125px;
+	display: flex;
+}
+
+.bottom .bottom-item{
+	flex: 1;
+	margin-right: 4px;
+	border-radius: 4px;
+	background-color: #1C2340;
+}
+.bottom .bottom-item.last{
+	margin-right: 0;
+}
+
+.bottom .bottom-item.hide{
+	visibility: hidden;
+}
+
+
+.bottom-item>p{
+	text-align: center;
+	height: 18px;
+	font-size: 12px;
+	color:#686E8C;
+	background-color: #0F132F;
+	margin: 0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.bottom-item-child{
+	display: flex;
+	position: relative;
+}
+
+.bottom-item-child>div{
+	flex: 1;
+}
+
+.bottom-item-child img{
+	margin: 30px 0 0 15px
+}
+
+.bottom-item-child .control>span{
+	display: block;
+	margin-left: 15px;
+	margin-top: 42px;
+	font-size: 14px;
+	opacity: .8
+	/*top: 25px;*/
+	/*right: 15px;*/
+}
+
+.bottom-item-child .control>input {
+	display: block;
+	margin-left: -15px;
+	margin-top: -20px;
+}
+
+/* ..........bottom item............ */
+
+
+/* ========== 第二个页面 IP配置 ============= */
+
+#ip{
+	/* 子元素设置margin-top会重叠，所以父元素设置padding */
+	padding-top: 40px;
+	background-color: #151936;
+}
+
+.ip-setting{
+	width: 700px;
+	height: 400px;
+	margin-left: 70px;
+	/*background-color: pink;*/
+}
+
+span#err{
+	display: inline-block;
+	width: 150px;
+	color:  #B71C0F;
+	margin-left: 20px;
+	font-size: 13px;
+
+}
+
+.ip-setting>p{
+	width: 395px;
+	font-weight: bold;
+	background-color: #0F132F;
+	padding: 8px 0;
+	border-radius: 2px;
+}
+
+.ip-setting span{
+	display: inline-block;
+	width: 80px;
+	margin-right: 10px;
+
+}
+
+#ip input{
+	display: inline-block;
+	width: 304px;
+	height: 34px;
+	font-size: 15px;
+	border-radius: 4px;
+	padding-left: 10px;
+	color: #9DA2BB;
+	background-color: #2E335A;
+	border: 1px solid #2E335A;
+}
+
+#ip select{
+	display: inline-block;
+	width: 304px;
+	height: 34px;
+	font-size: 14px;
+	color: #9DA2BB;
+	background-color: #2E335A;
+	border: 1px solid #2E335A;
+	border-radius: 4px;
+	padding-left: 10px;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+
+
+
+#ip button{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+
+
+.cancel{
+	background-color: #1C2340;
+	color: #D7DCF3;
+	border: 1px solid #1C2340;
+	/*border: 1px solid #CFD0D4;*/
+}
+
+.cancel:hover{
+	/*background-color: #F2F3F6;*/
+	background-color: #1C2340;
+	/*color: rgba(33,33,33, .8);*/
+	border: 1px solid #00DDBB;
+}
+
+
+/* 退出按钮 */
+#logout{
+	display: inline-block;
+	width: 60px;
+	height: 27px;
+	line-height: 27px;
+	background-color: rgb(255,91,103);
+	border: none;
+	float: right;
+	margin-top: 15px;
+	margin-right: 30px;
+	border-radius: 4px;
+	/*letter-spacing: 3px;*/
+}
+
+#logout:hover{
+	background-color: rgba(255,91,103, .8);
+}
+
+
+
+
+input[type='checkbox'].switch{
+	outline: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	position: relative;
+	width: 40px;
+	height: 20px;
+	background-color: #33395F;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: border-color .3s, background-color.3s;
+}
+input[type='checkbox'].switch::after{
+	content: '';
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 2px #33395F;
+	transition: .4s;
+	top: 2px;
+	position: absolute;
+	left: 2px;
+}
+
+input[type='checkbox'].switch:checked{
+	background-color: #19CCAE;
+}
+
+input[type="checkbox"].switch:checked::after{
+	content: '';
+	position: absolute;
+	left: 55%;
+	top: 2px;
+}
+
+button{
+	width: 100%;
+	font-size: 15px;
+	height: 40px;
+	line-height: 40px;
+	background-color:  #00DDBB;
+	color: #FFFFFF;
+	border: 1px solid #00DDBB;
+	border-radius: 4px;
+	margin-top: 10px;
+	cursor: pointer;
+	/*letter-spacing: 5px;*/
+
+}
+
+button:hover{
+	background-color: rgba(0,221,187, .8);
+	border: 1px solid  rgba(0,221,187, .8);
+	color: rgba(255,255,254, .9);
+}
